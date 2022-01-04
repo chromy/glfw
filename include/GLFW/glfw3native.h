@@ -95,7 +95,8 @@ extern "C" {
   #import <Cocoa/Cocoa.h>
  #else
   #include <ApplicationServices/ApplicationServices.h>
-  typedef void* id;
+  struct objc_object;
+  typedef objc_object* id;
  #endif
 #elif defined(GLFW_EXPOSE_NATIVE_X11) || defined(GLFW_EXPOSE_NATIVE_GLX)
  #include <X11/Xlib.h>
